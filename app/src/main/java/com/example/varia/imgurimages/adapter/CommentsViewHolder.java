@@ -6,17 +6,19 @@ import android.widget.TextView;
 
 import com.example.varia.imgurimages.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class CommentsViewHolder extends RecyclerView.ViewHolder{
 
-    TextView authorName;
-    TextView comment;
+    @BindView(R.id.textView2) TextView authorName;
+    @BindView(R.id.textView3) TextView comment;
 
 
     public CommentsViewHolder(View itemView) {
         super(itemView);
-        authorName = (TextView) itemView.findViewById(R.id.textView2);
-        comment = (TextView) itemView.findViewById(R.id.textView3);
+        ButterKnife.bind(this, itemView);
     }
 
 }

@@ -6,13 +6,16 @@ import android.widget.ImageView;
 
 import com.example.varia.imgurimages.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ImageViewHolder extends RecyclerView.ViewHolder {
 
-    ImageView imageView;
+    @BindView(R.id.image) ImageView imageView;
 
 
     public ImageViewHolder(View itemView) {
         super(itemView);
-        imageView = (ImageView) itemView.findViewById(R.id.image);
+        ButterKnife.bind(this, itemView);
     }
 }
